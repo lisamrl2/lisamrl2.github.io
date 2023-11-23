@@ -1,38 +1,41 @@
 const words = `
 
+Vektor Boson Streuung
+Neutrinoloser Doppelbeta-Zerfall
+Glühwein
+Outreach
+Masterclass
+Beschleuniger
+Strahlung
+Dosimeter
+ATLAS
+Tischkicker
+ZIH-Cluster
+Monte Carlo
+Data Analysis
+C++
+Größenordnung
+Quantenfeldtheorie
+Loop
+Next-to-Leading Order
+Tree Level
+Theorie
+experimentell
+Detektoren
+CERN
+SNO
+Neutrinos
+Nuklidkarte
+Astro-
+Laser
+Hadronen
+Medizinphysik
+Strahlenschutz
+schwarzes Loch
+Grundlagenforschung
+Paper
+Angewandt
 
-Game changer
-Disruptive technology
-Bilateral
-Bandwidth
-Transparency
-Strategic fit
-Core competencies
-Out of the box
-Bottom line
-Revisit
-Take that off-line
-24/7
-Out of the loop
-Benchmark
-Value-added
-Thought leader
-Proactive
-Win-win
-Fast track
-Result-driven
-Empower (or empowerment)
-Knowledge base
-At the end of the day
-Touch base
-Mindset
-Client focus(ed)
-Ballpark
-Game plan
-Leverage
-Cascade
-Sequential or sequentially
-Multiple times
 
 
 `;
