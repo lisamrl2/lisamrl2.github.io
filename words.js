@@ -132,7 +132,7 @@ en:{
       "Muon-Capture",
     ],
   
-    Bilow: ["Teens", "Teachers", "Outreach", "Masterclass"],
+    Bilow: ["Adolescents", "Teachers", "Outreach", "Masterclass"],
   
     Felsenkeller: [
       "Pelletron accelerator",
