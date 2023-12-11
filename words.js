@@ -59,9 +59,9 @@ en: [
 
 const words = {
   de:{
-  Arno: ["Tau Leptonen", "Liquid Argon", "Kaffee & Kuchen"],
+  Straessner: ["Tau Leptonen", "Liquid Argon", "Kaffee & Kuchen"],
 
-  Frank: [
+  Siegert: [
     "Vektor Boson Streuung",
     "SM ist unvollständig",
     "Jemand gestikuliert Teilchenkollision",
@@ -72,14 +72,14 @@ const words = {
     "Higgs-Mechanismus",
   ],
 
-  Kai: [
+  Zuber: [
     "Doppelbeta Zerfall",
     "Germanium Detektoren",
     "Neutrino",
     "Myon-Einfang",
   ],
 
-  Uta: ["Jugendliche", "Lehrkräfte", "Outreach", "Masterclass"],
+  Bilow: ["Jugendliche", "Lehrkräfte", "Outreach", "Masterclass"],
 
   Felsenkeller: [
     "Pelletron Beschleuniger",
@@ -103,7 +103,7 @@ const words = {
     "Grafikkarte",
   ],
 
-  Dominik: [
+  Stöckinger: [
     "Renormierung",
     "Gamma-5",
     "FlexibleSUSY",
@@ -112,9 +112,9 @@ const words = {
 },
 
 en:{
-    Arno: ["Tau Leptons", "Liquid Argon", "coffee"],
+    Straessner: ["Tau Leptons", "Liquid Argon", "coffee"],
   
-    Frank: [
+    Siegert: [
       "vector boson scattering",
       "SM is incomplete",
       "imitating a collision with hands",
@@ -125,14 +125,14 @@ en:{
       "Higgs-Mechanism",
     ],
   
-    Kai: [
+    Zuber: [
       "Doppelbeta decay",
       "Germanium detector",
       "Neutrino",
       "Muon-Capture",
     ],
   
-    Uta: ["Teens", "Teachers", "Outreach", "Masterclass"],
+    Bilow: ["Teens", "Teachers", "Outreach", "Masterclass"],
   
     Felsenkeller: [
       "Pelletron accelerator",
@@ -156,7 +156,7 @@ en:{
       "graphics card",
     ],
   
-    Dominik: [
+    Stöckinger: [
       "Renormalization",
       "Gamma-5",
       "FlexibleSUSY",

@@ -12,9 +12,49 @@
     <script type="text/javascript" src="files/game.js"></script>
     <script type="text/javascript" src="words.js"></script>
     <script type="text/javascript" src="files/content.js"></script>
+    <style>
+      h2 {
+        text-align: center;
+      }
+      p {
+        text-align: center; font-size: 20px;
+      }
+    </style>
   </head>
 
   <body onload="loadWords()">
+    <h2>
+      <span lang="de">Bingo zur Institutsvorstellung des IKTP</span>
+      <span lang="en">Bingo game of IKTP institute presentation</span>
+    </h2>
+    <p>
+      <span lang="de">
+        Schön, dass du da bist! Wir wünschen dir viel Spaß beim Kennenlernen der
+        Arbeitsgruppen des IKTP. Damit du die tollen Stichworte, die zu den
+        Gruppen gehören, nicht mitschreiben musst, kannst du sie hier auch
+        anklicken. Bei 5 Kästchen in einer Reihe darfst du "Bingo" rufen.
+      </span>
+      <span lang="en"
+        >Great to have you here! We hope you enjoy getting to know the working
+        groups of the IKTP. So that you don't have to write down the great
+        keywords that belong to the groups, you can also click on them here. If
+        you tick 5 boxes in a row, you can shout "Bingo".</span
+      >
+    </p>
+
+    <div class="horizontal-center">
+      <form>
+        <label for="lang-switch">
+          <span lang="de">Sprache</span>
+          <span lang="en">Language</span>
+        </label>
+        <select id="lang-switch" onchange="changeLang(this)">
+          <option value="en">English</option>
+          <option value="de" selected>Deutsch</option>
+        </select>
+      </form>
+    </div>
+    <br />
     <table class="card" id="card0">
       <tbody>
         <tr>
@@ -62,22 +102,6 @@
         <p lang="en">New Bingo Game</p>
       </button>
     </div>
-
-    <form>
-      <label for="lang-switch">
-        <span lang="de">Sprache</span>
-        <span lang="en">Language</span>
-      </label>
-      <select id="lang-switch" onchange="changeLang(this)">
-        <option value="en">English</option>
-        <option value="de" selected>Deutsch</option>
-      </select>
-    </form>
-
-    <p>
-      <span lang="de"> Text auf Deutsch</span>
-      <span lang="en">Text in English</span>
-    </p>
 
     <script>
       $("[lang]").hide(); // hide all lang attributes on start.
