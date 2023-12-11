@@ -11,7 +11,11 @@ table.card{
     border-spacing: 0;
     
 }
+.horizontal-center {
+    display: flex;    
+    justify-content: center;
 
+}
 
 table.card,
 table.win {

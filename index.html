@@ -1,63 +1,93 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
+  <head>
+    <title>IKTP Bingo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="files/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="files/game.js"></script>
+    <script type="text/javascript" src="words.js"></script>
+    <script type="text/javascript" src="files/content.js"></script>
+  </head>
 
-<head>
-  <title>IKTP Bingo</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="files/style.css">
-  <script type="text/javascript" src="files/game.js"></script>
-  <script type="text/javascript" src="words.js"></script>
-  <script type="text/javascript" src="files/content.js"></script>
-</head>
+  <body onload="loadWords()">
+    <table class="card" id="card0">
+      <tbody>
+        <tr>
+          <td title="Click to mark cell" id="cell0"></td>
+          <td title="Click to mark cell" id="cell1"></td>
+          <td title="Click to mark cell" id="cell2"></td>
+          <td title="Click to mark cell" id="cell3"></td>
+          <td title="Click to mark cell" id="cell4"></td>
+        </tr>
+        <tr>
+          <td title="Click to mark cell" id="cell5"></td>
+          <td title="Click to mark cell" id="cell6"></td>
+          <td title="Click to mark cell" id="cell7"></td>
+          <td title="Click to mark cell" id="cell8"></td>
+          <td title="Click to mark cell" id="cell9"></td>
+        </tr>
+        <tr>
+          <td title="Click to mark cell" id="cell10"></td>
+          <td title="Click to mark cell" id="cell11"></td>
+          <td title="Click to mark cell" id="cell24"></td>
+          <!--<td class="freecell">BULLSHIT BINGO<br>(free&nbsp;square)</td>-->
+          <td title="Click to mark cell" id="cell12"></td>
+          <td title="Click to mark cell" id="cell13"></td>
+        </tr>
+        <tr>
+          <td title="Click to mark cell" id="cell14"></td>
+          <td title="Click to mark cell" id="cell15"></td>
+          <td title="Click to mark cell" id="cell16"></td>
+          <td title="Click to mark cell" id="cell17"></td>
+          <td title="Click to mark cell" id="cell18"></td>
+        </tr>
+        <tr>
+          <td title="Click to mark cell" id="cell19"></td>
+          <td title="Click to mark cell" id="cell20"></td>
+          <td title="Click to mark cell" id="cell21"></td>
+          <td title="Click to mark cell" id="cell22"></td>
+          <td title="Click to mark cell" id="cell23"></td>
+        </tr>
+      </tbody>
+    </table>
 
-<body onload="loadWords()">
-  
+    <div class="horizontal-center">
+      <button onclick="loadWordsClean()">
+        <p lang="de">Neues Bingo Spiel</p>
+        <p lang="en">New Bingo Game</p>
+      </button>
+    </div>
 
-  <table class="card" id="card0">
-    <tbody>
-      <tr>
-        <td title="Click to mark cell" id="cell0"></td>
-        <td title="Click to mark cell" id="cell1"></td>
-        <td title="Click to mark cell" id="cell2"></td>
-        <td title="Click to mark cell" id="cell3"></td>
-        <td title="Click to mark cell" id="cell4"></td>
-      </tr>
-      <tr>
-        <td title="Click to mark cell" id="cell5"></td>
-        <td title="Click to mark cell" id="cell6"></td>
-        <td title="Click to mark cell" id="cell7"></td>
-        <td title="Click to mark cell" id="cell8"></td>
-        <td title="Click to mark cell" id="cell9"></td>
-      </tr>
-      <tr>
-        <td title="Click to mark cell" id="cell10"></td>
-        <td title="Click to mark cell" id="cell11"></td>
-        <td title="Click to mark cell" id="cell24"></td>
-        <!--<td class="freecell">BULLSHIT BINGO<br>(free&nbsp;square)</td>-->
-        <td title="Click to mark cell" id="cell12"></td>
-        <td title="Click to mark cell" id="cell13"></td>
-      </tr>
-      <tr>
-        <td title="Click to mark cell" id="cell14"></td>
-        <td title="Click to mark cell" id="cell15"></td>
-        <td title="Click to mark cell" id="cell16"></td>
-        <td title="Click to mark cell" id="cell17"></td>
-        <td title="Click to mark cell" id="cell18"></td>
-      </tr>
-      <tr>
-        <td title="Click to mark cell" id="cell19"></td>
-        <td title="Click to mark cell" id="cell20"></td>
-        <td title="Click to mark cell" id="cell21"></td>
-        <td title="Click to mark cell" id="cell22"></td>
-        <td title="Click to mark cell" id="cell23"></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <button onclick="loadWordsClean()">
-    Neues Bingo Spiel
-  </button>
-  
-</body>
+    <form>
+      <label for="lang-switch">
+        <span lang="de">Sprache</span>
+        <span lang="en">Language</span>
+      </label>
+      <select id="lang-switch" onchange="changeLang(this)">
+        <option value="en">English</option>
+        <option value="de" selected>Deutsch</option>
+      </select>
+    </form>
 
+    <p>
+      <span lang="de"> Text auf Deutsch</span>
+      <span lang="en">Text in English</span>
+    </p>
+
+    <script>
+      $("[lang]").hide(); // hide all lang attributes on start.
+      const language = localStorage.getItem("language");
+      if (language) {
+        $("[lang=" + language + "]").show(); // show just Korean text (you can change it)
+      } else {
+        $("[lang=de]").show(); // show just Korean text (you can change it)
+        localStorage.setItem("language", "de");
+      }
+    </script>
+  </body>
 </html>
