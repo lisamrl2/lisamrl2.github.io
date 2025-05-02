@@ -1,1 +1,129 @@
-test
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Anke!</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, #ff99cc, #66ccff);
+      color: yellow;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: backgroundFlash 3s infinite alternate;
+      height: 100vh;
+    }
+
+    @keyframes backgroundFlash {
+      0% { background-color: #ff99cc; }
+      100% { background-color: #66ccff; }
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px red;
+      animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .glitter {
+      margin: 20px;
+    }
+
+    #hidden_picture {
+	    position: fixed;
+	    top: 50vh;
+	    left: 50vw;
+	    transform: translate(-50%, -50%);
+	    width: 90vw;
+	    display: none;
+	    opacity: 1;
+
+    }
+
+    #hidden_background {
+	    position: fixed;
+	    top: 0;
+	    left:0;
+	    width: 100vw;
+	    height: 100vh;
+	    background: red;
+	    opacity: 0.8;
+	    animation: hueShift 2s linear infinite;
+	    filter: hue-rotate(0deg);
+	    display: none;
+    }
+
+
+    @keyframes hueShift {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    marquee {
+      font-size: 1.5em;
+      color: brown;
+      text-shadow: 3px 3px 6px blue;
+    }
+
+    .popup-button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin-top: 30px;
+      background-color: magenta;
+      border: 3px dashed yellow;
+      color: white;
+      cursor: pointer;
+    }
+
+    .popup-button:hover {
+      background-color: gold;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Happy Birthday, Mama! 🎂</h1>
+
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGI4dGc0YnJnMjh2c2Z5dmU0OXJ6d3o3cGFrazc1anVjZDFyZWZvdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/muCMfKz4K3diisOuMu/giphy.gif" alt="Glitzer" class="glitter" width="200">
+ 
+  <marquee behavior="scroll" direction="left">🎉 💖 💃 Alles Liebe zum Geburtstag und Herzlichen Glückwunsch! 💖 💃 🎉</marquee>
+
+  <p style="font-size: 2em">Und jetzt zum eigentlichen Geschenk:</p>
+
+  <marquee behavior="scroll" direction="right" scrolldelay=0 scrollamount=9>🤓 🧠 Du hast das Rätsel gelößt! Klicke auf diesen Button um das Geheimnis deines Geschenkes zu lüfte:  🧐🧠</marquee>
+  <div style="display: flex; column-gap: 3em;">
+  <button class="popup-button" onclick="showPopup()">Klick mich für deine Überraschung!</button>
+
+  <script>
+    function showPopup() {
+	     document.getElementById("hidden_background").style.display = "block";
+	     document.getElementById("hidden_picture").style.display = "block";
+    }
+  </script>
+
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTl2ZXlta3cycW5rejhzOTM1c2dsM3l2bDNuNzliZnJhNzF6bzM0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/LzwcNOrbA3aYvXK6r7/giphy.gif" alt="Geburtstagstorte" width="200">
+  </div>
+
+  <div id="hidden_background"/>
+
+  <img id="hidden_picture" src="https://lisamrl2.github.io/files/hidden_image.jpg" alt="Konzertfoto aus der Zukunft">
+
+
+
+</body>
+</html>
